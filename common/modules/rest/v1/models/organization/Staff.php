@@ -41,6 +41,7 @@ class Staff extends ActiveRecord
             'name' => \Yii::t('app', 'Name'),
             'email' => \Yii::t('app', 'E-mail'),
             'parent_id' => \Yii::t('app', 'Head'),
+            'gender' => \Yii::t('app', 'Gender'),
             'created_at' => \Yii::t('app', 'Created date'),
             'updated_at' => \Yii::t('app', 'Updated date'),
         ];
@@ -54,6 +55,8 @@ class Staff extends ActiveRecord
         return [
             [['name', 'email', 'parent_id', 'colors'], 'safe'],
             [['name', 'email'], 'required'],
+            ['name', 'string', 'length' => [2, 255]],
+            ['email', 'email'],
         ];
     }
     

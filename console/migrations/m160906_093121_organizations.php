@@ -15,8 +15,9 @@ class m160906_093121_organizations extends Migration
         $this->createTable('{{%organization_staff}}', [
             'id' => $this->primaryKey(),
             'parent_id' => $this->integer(),
-            'name' => $this->string('255'),
-            'email' => $this->string('255'),
+            'name' => $this->string(255),
+            'email' => $this->string(255),
+            'gender' => $this->string(10),
             'created_at' => $this->integer()->notNull(),
             'updated_at' => $this->integer()->notNull(),
         ], $tableOptions);
