@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a2bae1b3d7aa170cf1d13595a8fce641",
-    "content-hash": "eb0e52503ca3630c027c5d68e3723e98",
+    "hash": "0c55ecb0f32c6acdc4ba8b0428ff2bad",
+    "content-hash": "752af3f3d6f2a2acd7a6d460ef535f9f",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -298,6 +298,42 @@
                 "html"
             ],
             "time": "2016-07-16 12:58:58"
+        },
+        {
+            "name": "notamedia/yii2-relation",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/notamedia/yii2-relation.git",
+                "reference": "e8ae612d82b12d27a52ae9d96bdb7df3ffb57d2e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/notamedia/yii2-relation/zipball/e8ae612d82b12d27a52ae9d96bdb7df3ffb57d2e",
+                "reference": "e8ae612d82b12d27a52ae9d96bdb7df3ffb57d2e",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "~2.0"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "notamedia\\relation\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Saving related data in Yii2",
+            "keywords": [
+                "many-to-many",
+                "one-to-many",
+                "relation",
+                "yii2"
+            ],
+            "time": "2016-07-27 15:36:35"
         },
         {
             "name": "swiftmailer/swiftmailer",

@@ -6,9 +6,9 @@ use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
 
 /**
- * News model.
+ * Tag model.
  */
-class News extends ActiveRecord
+class Tag extends ActiveRecord
 {
     /**
      * @inheritdoc
@@ -28,9 +28,7 @@ class News extends ActiveRecord
     public function attributeLabels()
     {
         return [
-            'title' => \Yii::t('app', 'Title'),
-            'description' => \Yii::t('app', 'Description'),
-            'text' => \Yii::t('app', 'Text'),
+            'name' => \Yii::t('app', 'Tag'),
             'created_at' => \Yii::t('app', 'Created date'),
             'updated_at' => \Yii::t('app', 'Updated date'),
         ];
@@ -42,8 +40,7 @@ class News extends ActiveRecord
     public function rules()
     {
         return [
-            [['title', 'description', 'text'], 'safe'],
-            [['title', 'description'], 'required'],
+            ['name', 'required'],
         ];
     }
 }

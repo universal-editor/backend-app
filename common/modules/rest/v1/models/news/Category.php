@@ -1,6 +1,6 @@
 <?php
 
-namespace common\modules\rest\v1\models;
+namespace common\modules\rest\v1\models\news;
 
 use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
@@ -8,8 +8,13 @@ use yii\db\ActiveRecord;
 /**
  * News category model.
  */
-class NewsCategory extends ActiveRecord
+class Category extends ActiveRecord
 {
+    public static function tableName()
+    {
+        return '{{%news_category}}';
+    }
+
     /**
      * @inheritdoc
      */

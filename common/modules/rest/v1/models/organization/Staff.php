@@ -1,7 +1,8 @@
 <?php
 
-namespace common\modules\rest\v1\models;
+namespace common\modules\rest\v1\models\organization;
 
+use notamedia\relation\RelationBehavior;
 use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
 
@@ -10,6 +11,11 @@ use yii\db\ActiveRecord;
  */
 class Staff extends ActiveRecord
 {
+    public static function tableName()
+    {
+        return '{{%organization_staff}}';
+    }
+
     /**
      * @inheritdoc
      */
@@ -18,6 +24,10 @@ class Staff extends ActiveRecord
         return [
             [
                 'class' => TimestampBehavior::class
+            ],
+            [
+                'class' => RelationBehavior::class,
+                'relationalFields' => ['colors']
             ]
         ];
     }
@@ -30,6 +40,7 @@ class Staff extends ActiveRecord
         return [
             'name' => \Yii::t('app', 'Name'),
             'email' => \Yii::t('app', 'E-mail'),
+            'parent_id' => \Yii::t('app', 'Head'),
             'created_at' => \Yii::t('app', 'Created date'),
             'updated_at' => \Yii::t('app', 'Updated date'),
         ];
@@ -41,7 +52,18 @@ class Staff extends ActiveRecord
     public function rules()
     {
         return [
+            [['name', 'email', 'parent_id', 'colors'], 'safe'],
             [['name', 'email'], 'required'],
         ];
+    }
+    
+    public function extraFields()
+    {
+        return ['colors'];
+    }
+
+    public function getColors()
+    {
+        return $this->hasMany(StaffColor::class, ['staff_id' => 'id']);
     }
 }

@@ -1,8 +1,8 @@
 <?php
 
-namespace common\modules\rest\v1\controllers;
+namespace common\modules\rest\v1\controllers\news;
 
-use common\modules\rest\v1\models\News;
+use common\modules\rest\v1\models\news\News;
 use yii\rest\ActiveController;
 use yii\rest\Serializer;
 

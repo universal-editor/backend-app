@@ -1,17 +1,17 @@
 <?php
 
-namespace common\modules\rest\v1\controllers;
+namespace common\modules\rest\v1\controllers\organization;
 
-use common\modules\rest\v1\models\NewsCategory;
+use common\modules\rest\v1\models\organization\Staff;
 use yii\rest\ActiveController;
 use yii\rest\Serializer;
 
 /**
- * News category controller.
+ * Staff controller.
  */
-class NewsCategoryController extends ActiveController
+class StaffController extends ActiveController
 {
-    public $modelClass = NewsCategory::class;
+    public $modelClass = Staff::class;
 
     public $serializer = [
         'class' => Serializer::class,
