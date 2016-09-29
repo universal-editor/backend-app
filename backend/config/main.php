@@ -29,6 +29,12 @@ return [
                             'Access-Control-Expose-Headers' => ['X-Pagination-Current-Page'],
                         ],
                     ],
+                    'as contentNegotiator' => [
+                        'class' => \yii\filters\ContentNegotiator::class,
+                        'formats' => [
+                            'application/json' => \yii\web\Response::FORMAT_JSON,
+                        ],
+                    ],
                 ],
             ],
         ],
@@ -38,12 +44,11 @@ return [
             'csrfParam' => '_csrf-backend',
         ],
         'response' => [
-            'format' => yii\web\Response::FORMAT_JSON,
             'charset' => 'UTF-8',
         ],
         'session' => [
             // this is the name of the session cookie used for login on the backend
-            'name' => 'advanced-backend',
+            'name' => 'universal-backend',
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,

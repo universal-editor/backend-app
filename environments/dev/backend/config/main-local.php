@@ -16,9 +16,11 @@ if (!YII_ENV_TEST) {
         'class' => 'yii\debug\Module',
     ];
 
+    $config['bootstrap'][] = 'rest';
     $config['bootstrap'][] = 'gii';
     $config['modules']['gii'] = [
         'class' => 'yii\gii\Module',
+        'allowedIPs' => ['*']
     ];
 }
 
