@@ -11,6 +11,15 @@ return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'console\controllers',
+    'controllerMap' => [
+        'fixture' => [
+//            'class' => \yii\console\controllers\FixtureController::class,
+            'class' => \yii\faker\FixtureController::class,
+            'templatePath' => '@common/fixtures/templates',
+            'fixtureDataPath' => '@common/fixtures/data',
+            'namespace' => 'common\fixtures',
+        ],
+    ],
     'components' => [
         'log' => [
             'targets' => [

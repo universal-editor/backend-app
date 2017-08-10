@@ -19,3 +19,6 @@ info "Init project"
 
 info "Apply migrations"
 ./yii migrate <<< "yes"
+
+info "Apply fixtures"
+./yii fixture/load "*" <<< "yes"

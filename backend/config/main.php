@@ -70,6 +70,8 @@ return [
                 'PUT,POST rest/v1/news/<id:\d+>' => 'rest/v1/news/news/update',
                 'DELETE rest/v1/news/<id:\d+>' => 'rest/v1/news/news/delete',
                 'OPTIONS rest/v1/news/<id:\d+>' => 'rest/v1/news/news/options',
+                'PUT,POST rest/v1/news/<id:\d+>/lock' => 'rest/v1/news/news/lock',
+                'PUT,POST rest/v1/news/<id:\d+>/unlock' => 'rest/v1/news/news/unlock',
                 
                 'GET rest/v1/news/categories' => 'rest/v1/news/category/index',
                 'POST rest/v1/news/categories' => 'rest/v1/news/category/create',
