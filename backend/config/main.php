@@ -22,7 +22,7 @@ return [
                         'class' => \yii\filters\Cors::class,
                         'cors' => [
                             'Origin' => ['*'],
-                            'Access-Control-Request-Method' => ['GET', 'POST', 'PUT', 'DELETE', 'HEAD', 'INFO'],
+                            'Access-Control-Request-Method' => ['GET', 'POST', 'PUT', 'DELETE', 'HEAD', 'INFO', 'LOCK', 'UNLOCK'],
                             'Access-Control-Request-Headers' => ['X-Wsse'],
                             'Access-Control-Allow-Credentials' => true,
                             'Access-Control-Max-Age' => 3600,
@@ -45,6 +45,7 @@ return [
         ],
         'response' => [
             'charset' => 'UTF-8',
+            'format' => \yii\web\Response::FORMAT_JSON
         ],
         'session' => [
             // this is the name of the session cookie used for login on the backend
@@ -63,6 +64,18 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                [
+                    'class' => \yii\rest\UrlRule::class,
+                    'controller' => [
+                        'rest/v1/news' => 'rest/v1/news/news',
+                    ],
+                    'extraPatterns' => [
+                        'LOCK {id}' => 'lock',
+                        'UNLOCK {id}' => 'unlock'
+                    ],
+                ],
+                /*'LOCK rest/v1/news/<id:\d+>' => 'rest/v1/news/news/lock',
+                'UNLOCK rest/v1/news/<id:\d+>' => 'rest/v1/news/news/unlock',
                 'GET rest/v1/news' => 'rest/v1/news/news/index',
                 'POST rest/v1/news' => 'rest/v1/news/news/create',
                 'OPTIONS rest/v1/news' => 'rest/v1/news/news/options',
@@ -70,8 +83,6 @@ return [
                 'PUT,POST rest/v1/news/<id:\d+>' => 'rest/v1/news/news/update',
                 'DELETE rest/v1/news/<id:\d+>' => 'rest/v1/news/news/delete',
                 'OPTIONS rest/v1/news/<id:\d+>' => 'rest/v1/news/news/options',
-                'PUT,POST rest/v1/news/<id:\d+>/lock' => 'rest/v1/news/news/lock',
-                'PUT,POST rest/v1/news/<id:\d+>/unlock' => 'rest/v1/news/news/unlock',
                 
                 'GET rest/v1/news/categories' => 'rest/v1/news/category/index',
                 'POST rest/v1/news/categories' => 'rest/v1/news/category/create',
@@ -103,7 +114,7 @@ return [
                 'GET rest/v1/tags/<id:\d+>' => 'rest/v1/tag/view',
                 'PUT,POST rest/v1/tags/<id:\d+>' => 'rest/v1/tag/update',
                 'DELETE rest/v1/tags/<id:\d+>' => 'rest/v1/tag/delete',
-                'OPTIONS rest/v1/tags/<id:\d+>' => 'rest/v1/tag/options',
+                'OPTIONS rest/v1/tags/<id:\d+>' => 'rest/v1/tag/options',*/
             ],
         ],
     ],

@@ -31,3 +31,42 @@ cp vagrant-local.example.yml vagrant-local.yml
    
 That's all. You just need to wait for completion! After that you can access project locally 
 by URL http://universal-backend.dev.
+
+## RESTful API
+
+* News
+    * List: `GET http://universal-backend.dev/rest/v1/news`
+    * One: `GET http://universal-backend.dev/rest/v1/news/<id>`
+    * Create: `POST http://universal-backend.dev/rest/v1/news`
+    * Update: `PUT http://universal-backend.dev/rest/v1/news/<id>`
+    * Delete: `DELETE http://universal-backend.dev/rest/v1/news/<id>`
+    * Lock news: `LOCK http://universal-backend.dev/rest/v1/news/<3|4>`
+    * Unlock news: `UNLOCK http://universal-backend.dev/rest/v1/news/<3|4>`
+
+* News categories
+    * List: `GET http://universal-backend.dev/rest/v1/news/categories`
+    * One: `GET http://universal-backend.dev/rest/v1/news/categories/<id>`
+    * Create: `POST http://universal-backend.dev/rest/v1/news/categories`
+    * Update: `PUT http://universal-backend.dev/rest/v1/news/categories/<id>`
+    * Delete: `DELETE http://universal-backend.dev/rest/v1/news/categories/<id>`
+    
+* Staff
+    * List: `GET http://universal-backend.dev/rest/v1/staff`
+    * One: `GET http://universal-backend.dev/rest/v1/staff/<id>`
+    * Create: `POST http://universal-backend.dev/rest/v1/staff`
+    * Update: `PUT http://universal-backend.dev/rest/v1/staff/<id>`
+    * Delete: `DELETE http://universal-backend.dev/rest/v1/staff/<id>`
+    
+* Country
+    * List: `GET http://universal-backend.dev/rest/v1/country`
+    * One: `GET http://universal-backend.dev/rest/v1/country/<id>`
+    * Create: `POST http://universal-backend.dev/rest/v1/country`
+    * Update: `PUT http://universal-backend.dev/rest/v1/country/<id>`
+    * Delete: `DELETE http://universal-backend.dev/rest/v1/country/<id>`
+    
+* Tags
+    * List: `GET http://universal-backend.dev/rest/v1/tags`
+    * One: `GET http://universal-backend.dev/rest/v1/tags/<id>`
+    * Create: `POST http://universal-backend.dev/rest/v1/tags`
+    * Update: `PUT http://universal-backend.dev/rest/v1/tags/<id>`
+    * Delete: `DELETE http://universal-backend.dev/rest/v1/tags/<id>`

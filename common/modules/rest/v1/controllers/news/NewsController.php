@@ -22,21 +22,32 @@ class NewsController extends ActiveController
 
     public function actions()
     {
-        $action = parent::actions();
+        $actions = parent::actions();
 
-        $action['lock'] = [
-            'class'      => LockAction::class,
+        $actions['lock'] = [
+            'class' => LockAction::class,
             'modelClass' => $this->modelClass,
-            'locked'     => [3, 4]
+            'locked' => [3, 4]
         ];
 
-        $action['unlock'] = [
-            'class'      => UnlockAction::class,
+        $actions['unlock'] = [
+            'class' => UnlockAction::class,
             'modelClass' => $this->modelClass,
-            'locked'     => [3, 4]
+            'locked' => [3, 4]
         ];
 
-        return $action;
+        return $actions;
+    }
+
+    /**
+     * @inheritdoc
+     */
+    protected function verbs()
+    {
+       return array_merge(parent::verbs(), [
+           'lock' => ['LOCK'],
+           'unlock' => ['UNLOCK']
+       ]); 
     }
 
     /**
