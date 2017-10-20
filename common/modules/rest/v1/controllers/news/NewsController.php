@@ -42,17 +42,6 @@ class NewsController extends ActiveController
     /**
      * @inheritdoc
      */
-    protected function verbs()
-    {
-       return array_merge(parent::verbs(), [
-           'lock' => ['LOCK'],
-           'unlock' => ['UNLOCK']
-       ]); 
-    }
-
-    /**
-     * @inheritdoc
-     */
     public function behaviors()
     {
         return [];

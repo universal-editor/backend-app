@@ -7,9 +7,9 @@ use yii\rest\ActiveController;
 use yii\rest\Serializer;
 
 /**
- * Tag controller.
+ * Tags controller.
  */
-class TagController extends ActiveController
+class TagsController extends ActiveController
 {
     public $modelClass = Tag::class;
 

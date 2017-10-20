@@ -40,8 +40,8 @@ by URL http://universal-backend.dev.
     * Create: `POST http://universal-backend.dev/rest/v1/news`
     * Update: `PUT http://universal-backend.dev/rest/v1/news/<id>`
     * Delete: `DELETE http://universal-backend.dev/rest/v1/news/<id>`
-    * Lock news: `LOCK http://universal-backend.dev/rest/v1/news/<3|4>`
-    * Unlock news: `UNLOCK http://universal-backend.dev/rest/v1/news/<3|4>`
+    * Lock: `LOCK http://universal-backend.dev/rest/v1/news/<id>` (news #3 and #4 already locked)
+    * Unlock: `UNLOCK http://universal-backend.dev/rest/v1/news/<id>` (news #3 and #4 already locked)
 
 * News categories
     * List: `GET http://universal-backend.dev/rest/v1/news/categories`

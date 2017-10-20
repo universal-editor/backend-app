@@ -40,6 +40,6 @@ class LockAction extends \yii\rest\UpdateAction
             );
         }
 
-        return ['status' => self::STATUS];
+        \Yii::$app->getResponse()->setStatusCode(204);
     }
 }
