@@ -75,7 +75,7 @@ return [
             'showScriptName' => false,
             'rules' => [
                 [
-                    'class' => \yii\rest\UrlRule::class,
+                    'class' => \common\modules\rest\v1\routing\UrlRule::class,
                     'controller' => [
                         'rest/v1/news' => 'rest/v1/news/news'
                     ],
@@ -85,25 +85,25 @@ return [
                     ]
                 ],
                 [
-                    'class' => \yii\rest\UrlRule::class,
+                    'class' => \common\modules\rest\v1\routing\UrlRule::class,
                     'controller' => [
                         'rest/v1/news/categories' => 'rest/v1/news/category'
                     ]
                 ],
                 [
-                    'class' => \yii\rest\UrlRule::class,
+                    'class' => \common\modules\rest\v1\routing\UrlRule::class,
                     'controller' => [
                         'rest/v1/staff' => 'rest/v1/organization/staff'
                     ]
                 ],
                 [
-                    'class' => \yii\rest\UrlRule::class,
+                    'class' => \common\modules\rest\v1\routing\UrlRule::class,
                     'controller' => [
                         'rest/v1/country' => 'rest/v1/country'
                     ]
                 ],
                 [
-                    'class' => \yii\rest\UrlRule::class,
+                    'class' => \common\modules\rest\v1\routing\UrlRule::class,
                     'controller' => [
                         'rest/v1/tags' => 'rest/v1/tags'
                     ]
