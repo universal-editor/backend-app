@@ -53,7 +53,7 @@ class Staff extends ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'email', 'parent_id', 'colors'], 'safe'],
+            [['name', 'email', 'parent_id', 'colors', 'gender'], 'safe'],
             [['name', 'email'], 'required'],
             ['name', 'string', 'length' => [2, 255]],
             ['email', 'email'],

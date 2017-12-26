@@ -7,7 +7,7 @@ required_plugins.each do |plugin|
 end
 
 domains = {
-  backend:  'universal-backend.dev'
+  backend:  'universal-backend.test'
 }
 
 config = {
