@@ -28,7 +28,7 @@ class News extends ActiveRecord
             ],
             [
                 'class' => RelationBehavior::class,
-                'relationalFields' => ['authors', 'tags']
+                'relations' => ['authors', 'tags']
             ]
         ];
     }

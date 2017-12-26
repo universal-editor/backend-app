@@ -27,7 +27,7 @@ class Staff extends ActiveRecord
             ],
             [
                 'class' => RelationBehavior::class,
-                'relationalFields' => ['colors']
+                'relations' => ['colors']
             ]
         ];
     }

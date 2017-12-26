@@ -8,13 +8,11 @@
         "issues": "https://github.com/universal-editor/backend-app/issues",
         "source": "https://github.com/universal-editor/backend-app"
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "require": {
-        "php": ">=5.4.0",
-        "yiisoft/yii2": ">=2.0.6",
-        "yiisoft/yii2-bootstrap": "*",
-        "yiisoft/yii2-swiftmailer": "*",
-        "notamedia/yii2-relation": "master"
+        "php": ">=7.0",
+        "yiisoft/yii2": "~2.0.13",
+        "notamedia/yii2-relation": "~1.0"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",
